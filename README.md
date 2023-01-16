@@ -85,7 +85,11 @@ Foundry is made of 3 CLI tools - [Forge](https://book.getfoundry.sh/forge/), [Ca
 
 ### Installing libraries
 
-Foundry uses git moudles for its libraries mangements, so we won't use npm like as we do in hh/truffle, instead we'll use `forge install $GITHUB_LINK` command to install libraries.
+Foundry uses git moudles for its libraries mangements, so we won't use npm like as we do in hh/truffle, instead we'll use `forge install $GITHUB_LINK` command to install libraries, ie:
+
+```
+forge install OpenZeppelin/openzeppelin-contracts
+```
 
 ### remappings
 
