@@ -3,10 +3,10 @@ pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+
 contract Bank is Ownable {
     uint256 public immutable withdrawalBlock;
-    mapping (address => uint256) addressToDepositedValue;
-
+    mapping(address => uint256) addressToDepositedValue;
 
     constructor() {
         withdrawalBlock = block.number + 5;
@@ -22,7 +22,7 @@ contract Bank is Ownable {
 
     function withdraw() public onlyOwner {
         require(block.number >= withdrawalBlock, "Too early to withdraw");
-        (bool success, ) = msg.sender.call{value: address(this).balance}("");
+        (bool success,) = msg.sender.call{value: address(this).balance}("");
         require(success, "Transfer failed.");
-    }   
+    }
 }

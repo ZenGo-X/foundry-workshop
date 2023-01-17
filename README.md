@@ -106,7 +106,7 @@ remappings = [
 
 We'll write contract that:
 
-- has a function that gets 0.01 ETH in a mapping
+- has a function that gets 0.01 ETH and stored the total deposit amount per address in a mapping
 - has a function that returns total ETH recieved by each address
 - has an access control that only allows the owner to withdraw the funds and only 5 blocks after the deployment block
 
