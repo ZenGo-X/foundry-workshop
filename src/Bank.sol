@@ -1,8 +1,7 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-
 
 contract Bank is Ownable {
     uint256 public immutable withdrawalBlock;
@@ -13,6 +12,7 @@ contract Bank is Ownable {
     }
 
     function deposit() public payable {
+        require(msg.value > 0, "Must despoit more than 0");
         addressToDepositedValue[msg.sender] += msg.value;
     }
 

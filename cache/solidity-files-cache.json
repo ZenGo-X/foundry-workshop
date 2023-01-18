@@ -491,6 +491,60 @@
         }
       }
     },
+    "lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1673904486432,
+      "contentHash": "9ca73393dbc2f8cde2aa628f8d05c5d5",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Test.sol/Test.json"
+        }
+      }
+    },
     "lib/forge-std/src/Vm.sol": {
       "lastModificationDate": 1673904486433,
       "contentHash": "7d92321fbeea01d10f89778af1d0e074",
@@ -614,60 +668,6 @@
         }
       }
     },
-    "lib/forge-std/src/test.sol": {
-      "lastModificationDate": 1673904486432,
-      "contentHash": "9ca73393dbc2f8cde2aa628f8d05c5d5",
-      "sourceName": "lib/forge-std/src/test.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
-      ],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "Test": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "test.sol/Test.json"
-        }
-      }
-    },
     "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
       "lastModificationDate": 1673904486463,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
@@ -750,10 +750,10 @@
         }
       }
     },
-    "script/Counter.s.sol": {
-      "lastModificationDate": 1673904484305,
-      "contentHash": "0705c52104730a78aef4aa6694175c81",
-      "sourceName": "script/Counter.s.sol",
+    "script/Bank.s.sol": {
+      "lastModificationDate": 1673969605065,
+      "contentHash": "7db08a55a9bbaa69da53afccc40c90a4",
+      "sourceName": "script/Bank.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -793,18 +793,21 @@
         "lib/forge-std/src/StdUtils.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "src/Bank.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
-        "CounterScript": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Counter.s.sol/CounterScript.json"
+        "BankScript": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Bank.s.sol/BankScript.json"
         }
       }
     },
     "src/Bank.sol": {
-      "lastModificationDate": 1673904564406,
-      "contentHash": "087a9b1fceef03c66005de2d8b015296",
+      "lastModificationDate": 1674037902500,
+      "contentHash": "071a9d6618a59b4b22a87ab834819812",
       "sourceName": "src/Bank.sol",
       "solcConfig": {
         "settings": {
@@ -845,10 +848,10 @@
         }
       }
     },
-    "test/Bank.sol": {
-      "lastModificationDate": 1673904551494,
-      "contentHash": "c5c0a6155dbefe676e01132987468c59",
-      "sourceName": "test/Bank.sol",
+    "test/Bank.t.sol": {
+      "lastModificationDate": 1674040214939,
+      "contentHash": "8d5dc74b4e908798ce4b3e89d214b281",
+      "sourceName": "test/Bank.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -888,10 +891,10 @@
         "lib/forge-std/src/StdMath.sol",
         "lib/forge-std/src/StdStorage.sol",
         "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/test.sol",
         "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
         "lib/openzeppelin-contracts/contracts/utils/Context.sol",
         "src/Bank.sol"
@@ -899,7 +902,7 @@
       "versionRequirement": "^0.8.17",
       "artifacts": {
         "BankTest": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Bank.sol/BankTest.json"
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Bank.t.sol/BankTest.json"
         }
       }
     }
